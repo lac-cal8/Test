@@ -1,0 +1,73 @@
+body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; }
+
+/* Phần trên: 35% màn hình cho ảnh */
+.top-section {
+    height: 35vh; 
+    overflow: hidden;
+}
+.top-section img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Phần dưới: 65% màn hình cho màu kem sữa */
+.bottom-section {
+    height: 65vh;
+    background-color: #FFFDF0; /* Màu kem sữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content h1 { color: #5D4037; font-size: 2rem; margin-bottom: 10px; }
+.button-group { display: flex; gap: 20px; margin-top: 30px; }
+
+.btn {
+    text-decoration: none; padding: 15px 30px; border-radius: 50px;
+    font-weight: bold; transition: 0.3s;
+}
+.btn-ocean { background-color: #A3C1DA; color: #4A5D6A; }
+.btn-latte { background-color: #D7CCC8; color: #6D4C41; }
+.btn:hover { transform: scale(1.1); }    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#btn1 {
+    background-color: #8d6e63;
+    color: #ffffff;
+}
+
+#btn1:hover {
+    background-color: #6d4c41;
+    transform: translateY(-2px);
+}
+
+#btn2 {
+    background-color: #d7ccc8;
+    color: #4e342e;
+    border: 1px solid #bcaaa4;
+}
+
+#btn2:hover {
+    background-color: #bcaaa4;
+    transform: scale(1.05);
+}
+
+#hidden-message {
+    margin-top: 30px;
+    text-align: left;
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 3px solid #8d6e63;
+    border-radius: 5px;
+}
+
+#text-paragraph-1, #text-paragraph-2 {
+    line-height: 1.6;
+    margin: 10px 0;
+    font-size: 1.05rem;
+}
+
+#text-paragraph-2 {
+    font-style: italic;
+    color: #8d6e63;
+}
