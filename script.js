@@ -1,11 +1,12 @@
 const data = {
     "First Path": [
-        { text: "• The ocean breeze heals the soul.", img: "LINK_ANH_1_PAGE_1" },
-        { text: "• Finding peace in every wave.", img: "LINK_ANH_2_PAGE_1" }
+        { text: "• The ocean breeze heals the soul.", img: "lac.jpg" },
+        { text: "• Finding peace in every wave.", img: "lac.jpg" }
     ],
     "Second Path": [
-        { text: "• Warm latte for a cozy morning.", img: "LINK_ANH_1_PAGE_2" },
-        { text: "• Sweetness in every sip of life.", img: "LINK_ANH_2_PAGE_2" }
+        { text: "• Warm latte for a cozy morning.", img: "lac.jpg" },
+        { text: "• Ưhat the fuck.", img: "lac.jpg" },
+        { text: "• Sweetness in every sip of life.", img: "lac.jpg" }
     ]
 };
 
