@@ -1,36 +1,55 @@
-// You can edit the English messages here
-const content1 = "Every effort you've made lately is truly appreciated. Whether today was a bit tiring or filled with joy, just embrace it gently.";
-const content2 = "We all deserve quiet moments to listen to ourselves. Wishing you a peaceful evening and the sweetest of dreams!";
+const data = {
+    "First Path": [
+        { text: "• The ocean breeze heals the soul.", img: "LINK_ANH_1_PAGE_1" },
+        { text: "• Finding peace in every wave.", img: "LINK_ANH_2_PAGE_1" }
+    ],
+    "Second Path": [
+        { text: "• Warm latte for a cozy morning.", img: "LINK_ANH_1_PAGE_2" },
+        { text: "• Sweetness in every sip of life.", img: "LINK_ANH_2_PAGE_2" }
+    ]
+};
 
-let i = 0;
-let j = 0;
-const speed = 50; // typing speed in milliseconds
+window.onload = function() {
+    const pageTitle = document.title;
+    const items = data[pageTitle];
+    const listContainer = document.getElementById("list-content");
 
-function showNextButton() {
-    document.getElementById('btn1').style.display = 'none';
-    document.getElementById('btn2').style.display = 'inline-block';
-}
+    async function showItems() {
+        for (let item of items) {
+            // Tạo phần tử li
+            const li = document.createElement("li");
+            const textSpan = document.createElement("span");
+            textSpan.className = "item-text";
+            const imgElement = document.createElement("img");
+            imgElement.src = item.img;
+            imgElement.className = "item-img";
 
-function startTyping() {
-    document.getElementById('btn2').style.display = 'none';
-    document.getElementById('hidden-message').style.display = 'block';
-    typeWriter1();
-}
+            li.appendChild(textSpan);
+            li.appendChild(imgElement);
+            listContainer.appendChild(li);
 
-function typeWriter1() {
-    if (i < content1.length) {
-        document.getElementById("text-paragraph-1").innerHTML += content1.charAt(i);
-        i++;
-        setTimeout(typeWriter1, speed);
-    } else {
-        setTimeout(typeWriter2, 500); // Wait 0.5s before starting paragraph 2
+            // Hiệu ứng đánh máy
+            await typeEffect(textSpan, item.text);
+            // Hiện ảnh sau khi gõ xong
+            imgElement.style.display = "block";
+        }
     }
-}
 
-function typeWriter2() {
-    if (j < content2.length) {
-        document.getElementById("text-paragraph-2").innerHTML += content2.charAt(j);
-        j++;
-        setTimeout(typeWriter2, speed);
+    function typeEffect(element, text) {
+        return new Promise(resolve => {
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, 40);
+                } else {
+                    resolve();
+                }
+            }
+            typing();
+        });
     }
-}
+
+    showItems();
+};
