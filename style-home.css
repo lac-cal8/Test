@@ -2,7 +2,7 @@ body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-
 
 /* Phần trên: 35% màn hình cho ảnh */
 .top-section {
-    height: 35vh; 
+    height: 38vh; 
     overflow: hidden;
 }
 .top-section img {
@@ -11,7 +11,7 @@ body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-
 
 /* Phần dưới: 65% màn hình cho màu kem sữa */
 .bottom-section {
-    height: 65vh;
+    height: 62vh;
     background-color: #FFFDF0; /* Màu kem sữa */
     display: flex;
     justify-content: center;
