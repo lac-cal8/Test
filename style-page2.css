@@ -1,0 +1,7 @@
+body { background-color: #F5EBE0; margin: 0; padding: 40px 20px; font-family: 'Segoe UI', sans-serif; color: #6D4C41; display: flex; justify-content: center; }
+.container { background-color: #FFF5F5; padding: 40px; border-radius: 30px; max-width: 500px; width: 100%; text-align: center; }
+ul { list-style: none; padding: 0; text-align: left; }
+li { margin-bottom: 30px; }
+.item-text { font-size: 1.1rem; font-weight: 500; display: block; margin-bottom: 10px; border-left: 3px solid #D4A5A5; padding-left: 10px; }
+.item-img { width: 100%; border-radius: 15px; display: none; }
+.btn-back { display: inline-block; margin-top: 30px; text-decoration: none; color: #D4A5A5; font-weight: bold; border-bottom: 2px solid; }
